@@ -7,11 +7,16 @@ var app = angular.module('Sammy-gui', ['ui.bootstrap', 'ui.router', 'ngCookies',
         return new Date(1970, 0, 1).setSeconds(seconds);
     };
 }])
+    .filter('encodeURIComponent', function () {
+        return window.encodeURIComponent;
+    })
 /* replace underscores with spaces */
 .filter('underscoreToSpace', function () {
   return function (input) {
       return input.replace(/_/g, ' ');
   };
+
+
 });
 
 

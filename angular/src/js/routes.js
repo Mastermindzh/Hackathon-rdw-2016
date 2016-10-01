@@ -17,11 +17,11 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'templates/car_overview.html'
             })
             .state('cardetails', {
-                url: '/cars/details',
+                url: '/cars/:id',
                 templateUrl: 'templates/car_details.html'
             })
             .state('caredit', {
-                url: '/cars/details/edit',
+                url: '/cars/details/edit/:id',
                 templateUrl: 'templates/car_edit.html'
             })
             .state('approval', {

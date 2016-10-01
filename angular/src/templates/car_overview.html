@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-md-3">
                         <select class="form-control">
-                            <option ng-repeat="car in cars">{{car.name}}</option>
+                            <option ng-repeat="car in cars">{{car.Name}}</option>
                         </select>
                     </div>
 
@@ -23,15 +23,15 @@
         </div>
     </div>
     <div class="row">
-        <a ng-repeat="car in cars | filter:searchText.search " href = "#/cars/details" class="col-lg-6 col-xs-12 blackLinks">
+        <a ng-repeat="car in cars | filter:searchText.search " href="#/cars/{{car.id | encodeURIComponent}}" class="col-lg-6 col-xs-12 blackLinks">
             <rd-widget>
                 <rd-widget-body>
                     <div class="widget-icon green pull-left">
                         <i class="fa fa-car" aria-hidden="true"></i>
                     </div>
-                    <div class="title">{{car.name}}</div>
+                    <div class="title">{{car.Name}}</div>
                     <div class="comment">
-                        <span>{{car.licenseplate}}</span><br />
+                        <span>{{car.Licenseplate}}</span><br />
                     </div>
                 </rd-widget-body>
             </rd-widget>
