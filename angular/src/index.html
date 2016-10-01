@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sammy-gui</title>
+  <title>RDW portal</title>
   <script type="text/javascript" src="config.js"></script>
   <!-- STYLES -->
   <!-- build:css lib/css/main.min.css -->
@@ -38,17 +38,19 @@
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-list">
+        <li class="sidebar-list" ng-show="(username == undefined) || username ==''">
           <a href="#">Login <span class="menu-icon fa fa-user"></span></a>
         </li>
         <li class="sidebar-list"  ng-show="(username != undefined) && (username != '')">
           <a href="#/cars">Mijn voertuigen <span class="menu-icon fa fa-car"></span></a>
         </li>
         <li class="sidebar-list"  ng-show="(username != undefined) && (username != '')">
-          <a href="#/goedkeuringen">Goedkeuringen <span class="menu-icon fa fa-check"></span></a>
+          <a href="#/approval">Goedkeuringen <span class="menu-icon fa fa-check"></span></a>
         </li>
+
+        <!-- Contact -->
         <li class="sidebar-list">
-          <a href="#/">Contact <span class="menu-icon fa fa-envelope-o"></span></a>
+          <a href="mailto:">Contact <span class="menu-icon fa fa-envelope-o"></span></a>
         </li>
       </ul>
     </div>

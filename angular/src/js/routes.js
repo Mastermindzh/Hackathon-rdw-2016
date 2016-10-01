@@ -15,12 +15,23 @@ app.config(['$stateProvider', '$urlRouterProvider',
             .state('cars', {
                 url: '/cars',
                 templateUrl: 'templates/car_overview.html'
-            }).state('cardetails', {
-            url: '/cars/details',
-            templateUrl: 'templates/car_details.html'
-            }).state('caredit', {
-            url: '/cars/details/edit',
-            templateUrl: 'templates/car_edit.html'
-        })
+            })
+            .state('cardetails', {
+                url: '/cars/details',
+                templateUrl: 'templates/car_details.html'
+            })
+            .state('caredit', {
+                url: '/cars/details/edit',
+                templateUrl: 'templates/car_edit.html'
+            })
+            .state('approval', {
+                url: '/approval',
+                templateUrl: 'templates/approval.html'
+            })
+            .state('addFeature', {
+                url: '/addfeature',
+                templateUrl: 'templates/car_edit_feature.html'
+            })
+
     }
 ]);

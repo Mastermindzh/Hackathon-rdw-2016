@@ -19,6 +19,12 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
             case "/cars/details/edit":
                 $scope.currentPage = "Mijn voertuig aanpassen";
                 break;
+            case "/approval":
+                $scope.currentPage = "Aanpassingen goedkeuren";
+                break;
+            case "/addfeature":
+                $scope.currentPage = "Auto feature toevoegen";
+                break;
             default:
                 $scope.currentPage = "Login";
             break;

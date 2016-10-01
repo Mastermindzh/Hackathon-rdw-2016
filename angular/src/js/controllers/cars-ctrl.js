@@ -8,6 +8,8 @@ app.controller('CarsCtrl', ['$scope','$http','$rootScope','Config','Alert', Cars
 
         $scope.searchText= {"search":''};
 
+        $scope.username = $rootScope.username;
+
         $http.get(Config.url + '/cars')
             .success(function(data, status, headers, config) {
                 $scope.cars = data;

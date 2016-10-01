@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "multichain-node": "^2.0.1-alpha24",
+    "mysql": "github:mysqljs/mysql",
     "serve-favicon": "~2.3.0"
   }
 }
