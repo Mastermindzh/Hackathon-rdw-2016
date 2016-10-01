@@ -18,16 +18,20 @@ router.get('/', function(req, res, next) {
         res.send(rows);
     });
 
-
 });
 
 router.get('/:Id', function(req, res) {
-
     connection.query('select * from Car WHERE id = ?',req.params.Id, function(err, rows, fields) {
         if (err) throw err;
         res.send(rows);
     });
+});
 
+router.get('/owner/:Username', function(req, res) {
+    connection.query('select * from Car WHERE owner = ?',req.params.Username, function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows);
+    });
 });
 
 module.exports = router;
