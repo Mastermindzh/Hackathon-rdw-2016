@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 //routes
 var routes = require('./routes/index');
 var cars = require('./routes/cars');
+var parts = require('./routes/parts');
+var maintenance = require('./routes/maintenance');
+
 
 var app = express();
 
@@ -33,6 +36,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/cars', cars);
+app.use('/parts', parts);
+app.use('/maintenance', maintenance);
+
+
 
 
 
