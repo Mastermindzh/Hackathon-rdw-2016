@@ -13,6 +13,9 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
             case "/cars":
                 $scope.currentPage = "Mijn voertuigen";
             break;
+            case "/cardetails":
+                $scope.currentPage = "Mijn voertuig details";
+                break;
             default:
                 $scope.currentPage = "Login";
             break;

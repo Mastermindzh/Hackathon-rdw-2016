@@ -1,1 +1,1 @@
-var configItems={APIurl:"http://127.0.0.1:5000"};
+var configItems={APIurl:"http://localhost:3000"};

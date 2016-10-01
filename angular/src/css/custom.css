@@ -2,6 +2,15 @@ body{
     line-height: normal;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.minHeight{
+    min-height: 75px !important;
+}
+
 .blackLinks{
     color: black !important;
 }

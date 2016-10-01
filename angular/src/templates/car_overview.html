@@ -1,29 +1,42 @@
 <div data-ng-controller="CarsCtrl">
-    <a href = "" class="col-md-6 col-xs-12 blackLinks">
-        <rd-widget>
-            <rd-widget-body>
-                <div class="widget-icon green pull-left">
-                    <i class="fa fa-car" aria-hidden="true"></i>
-                </div>
-                <div class="title">Honda Civic</div>
-                <div class="comment">
-                    2k-yx-49
-                </div>
-            </rd-widget-body>
-        </rd-widget>
-    </a>
-    <a href = "" class="col-md-6 col-xs-12 blackLinks">
-        <rd-widget>
-            <rd-widget-body>
-                <div class="widget-icon red pull-left">
-                    <i class="fa fa-car" aria-hidden="true"></i>
-                </div>
-                <div class="title">Ferrari Enzo</div>
-                <div class="comment">
-                    85-sd-x5
-                </div>
-            </rd-widget-body>
-        </rd-widget>
-    </a>
 
+    <div class="row">
+        <div class="col-lg-12 col-xs-12 blackLinks">
+            <rd-widget>
+                <rd-widget-body classes="minHeight">
+                    <div class="col-md-3">
+                            <input type="text" class="form-control" ng-model="searchText" placeholder="Search for...">
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control" type="date" name="From">
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control" type="date" name="From">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control">
+                            <option>Honda</option>
+                            <option>Ferrari</option>
+                        </select>
+                    </div>
+
+                </rd-widget-body>
+            </rd-widget>
+        </div>
+    </div>
+    <div class="row">
+        <a ng-repeat="car in cars | filter:searchText" href = "#/cardetails" class="col-lg-6 col-xs-12 blackLinks">
+            <rd-widget>
+                <rd-widget-body>
+                    <div class="widget-icon green pull-left">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">{{car.name}}</div>
+                    <div class="comment">
+                        <span>{{car.licenseplate}}</span><br />
+                    </div>
+                </rd-widget-body>
+            </rd-widget>
+        </a>
+    </div>
 </div>
