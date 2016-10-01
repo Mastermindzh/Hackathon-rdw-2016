@@ -24,6 +24,16 @@ router.get('/', function(req, res, next) {
 
 });
 
+/* GET maintenance listing. */
+router.get('/notapproved', function(req, res, next) {
+
+    connection.query('select * from Car_has_Maintenance where !approved', function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows);
+    });
+
+});
+
 /* GET specific maintenance info. */
 router.get('/:Id', function(req, res, next) {
 
@@ -46,7 +56,7 @@ router.get('/carmaintenance/:Id', function(req, res, next) {
 
 router.post('/add',function(request,response){
     var description=request.body.description;
-
+    console.log('logging: ' + description);
     connection.query('INSERT INTO Maintenance (description) VALUES (?)',description, function(err, rows, fields) {
         if (err) throw err;
     });
@@ -60,6 +70,17 @@ router.post('/carmaintenance',function(request,response){
     var maintenance_id=request.body.Maintenance_id;
 
     connection.query('INSERT INTO Car_has_Maintenance (Car_id, Maintenance_id) VALUES (?,?)',[car_id,maintenance_id], function(err, rows, fields) {
+        if (err) throw err;
+    });
+
+    response.end();
+});
+
+router.post('/approve',function(request,response){
+    var car_id=request.body.Car_id;
+    var maintenance_id=request.body.Maintenance_id;
+
+    connection.query('UPDATE Car_has_Maintenance set approved = 1 where Car_id = ? AND Maintenance_id = ?',[car_id,maintenance_id], function(err, rows, fields) {
         if (err) throw err;
     });
 
