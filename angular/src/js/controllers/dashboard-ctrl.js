@@ -5,9 +5,13 @@
 
 app
 
-.controller('DashboardCtrl', ['$scope','$http','Config','Alert', DashboardCtrl]);
+.controller('DashboardCtrl', ['$scope','$http','$rootScope','Config','Alert', DashboardCtrl]);
 
-    function DashboardCtrl($scope, $http, Config, Alert) {
+    function DashboardCtrl($scope, $http, $rootScope, Config, Alert) {
 
+        $scope.username = {'username':''};
 
+        $scope.login = function () {
+            $rootScope.username = $scope.username.username;
+        }
     }

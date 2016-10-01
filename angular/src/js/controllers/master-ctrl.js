@@ -2,13 +2,24 @@
  * Master Controller
  */
 
-app.controller('MasterCtrl', ['$scope', '$cookieStore', MasterCtrl]);
+app.controller('MasterCtrl', ['$scope', '$cookieStore','$rootScope', MasterCtrl]);
 
-function MasterCtrl($scope, $cookieStore) {
+function MasterCtrl($scope, $cookieStore,$rootScope) {
     /**
      * Sidebar Toggle & Cookie Control
      */
     var mobileView = 992;
+
+    $scope.getName = function () {
+        $scope.username = $rootScope.username;
+    }
+
+    $rootScope.$on('$stateChangeStart',
+    function(event, toState, toParams, fromState, fromParams){
+        $scope.getName();
+    })
+
+
 
     $scope.getWidth = function() {
         return window.innerWidth;

@@ -2,9 +2,11 @@
  * CPU Controller
  */
 
-app.controller('CarsCtrl', ['$scope','$http','Config','Alert', CarsCtrl]);
+app.controller('CarsCtrl', ['$scope','$http','$rootScope','Config','Alert', CarsCtrl]);
 
-    function CarsCtrl($scope, $http, Config, Alert) {
+    function CarsCtrl($scope, $http,$rootScope, Config, Alert) {
+
+        $scope.searchText= {"search":''};
 
         $http.get(Config.url + '/cars')
             .success(function(data, status, headers, config) {

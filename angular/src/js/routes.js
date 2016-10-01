@@ -16,8 +16,11 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: '/cars',
                 templateUrl: 'templates/car_overview.html'
             }).state('cardetails', {
-            url: '/cardetails',
+            url: '/cars/details',
             templateUrl: 'templates/car_details.html'
+            }).state('caredit', {
+            url: '/cars/details/edit',
+            templateUrl: 'templates/car_edit.html'
         })
     }
 ]);

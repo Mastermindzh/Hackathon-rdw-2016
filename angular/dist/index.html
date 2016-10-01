@@ -29,10 +29,16 @@
           </a>
         </li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a href="#">Login <span class="menu-icon fa fa-user"></span></a>
+        </li>
+        <li class="sidebar-list"  ng-show="(username != undefined) && (username != '')">
+          <a href="#/cars">Mijn voertuigen <span class="menu-icon fa fa-car"></span></a>
+        </li>
+        <li class="sidebar-list"  ng-show="(username != undefined) && (username != '')">
+          <a href="#/goedkeuringen">Goedkeuringen <span class="menu-icon fa fa-check"></span></a>
         </li>
         <li class="sidebar-list">
-          <a href="#/cars">Mijn voertuigen <span class="menu-icon fa fa-car"></span></a>
+          <a href="#/">Contact <span class="menu-icon fa fa-envelope-o"></span></a>
         </li>
       </ul>
     </div>
@@ -79,7 +85,10 @@
               <div class="breadcrumb-links">
                 <a href = "#">Home</a>
                 <span data-ng-repeat="crumb in crumbs track by $index" data-ng-if="!(crumb=='')">
-                / <a href = "#/{{crumb}}">{{crumb}}</a>
+                /
+                  <a ng-show="crumb == 'details'" href="/#cars/{{crumb}}">{{crumb}}</a>
+                  <a ng-show="crumb == 'edit'" href="/#cars/details/{{crumb}}">{{crumb}}</a>
+                  <a ng-show="(crumb != 'details') && (crumb != 'edit')" href = "#/{{crumb}}">{{crumb}}</a>
                   </span>
               </div>
             </div>

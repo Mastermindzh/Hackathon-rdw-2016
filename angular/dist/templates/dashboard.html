@@ -15,23 +15,21 @@
                             <!-- Text input-->
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" required="">
-
+                                    <input id="username" ng-model="username.username" name="username" type="text" placeholder="username" class="form-control input-md" required="">
                                 </div>
                             </div>
 
                             <!-- Password input-->
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" required="">
-
+                                    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md">
                                 </div>
                             </div>
 
                             <!-- Button -->
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <button id="submit" name="submit" class="btn btn-success pull-right">Submit</button>
+                                    <a ng-click="login()" href="#/cars" id="submit" name="submit" class="btn btn-success pull-right">Submit</a>
                                 </div>
                             </div>
 

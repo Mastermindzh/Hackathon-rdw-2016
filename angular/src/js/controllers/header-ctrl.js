@@ -13,8 +13,11 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
             case "/cars":
                 $scope.currentPage = "Mijn voertuigen";
             break;
-            case "/cardetails":
+            case "/cars/details":
                 $scope.currentPage = "Mijn voertuig details";
+                break;
+            case "/cars/details/edit":
+                $scope.currentPage = "Mijn voertuig aanpassen";
                 break;
             default:
                 $scope.currentPage = "Login";
@@ -23,6 +26,7 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
 
         $scope.crumbs = [];
         $scope.crumbs = url.split("/");
+
     };
 
 
