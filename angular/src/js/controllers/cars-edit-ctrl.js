@@ -16,14 +16,14 @@ app.controller('CarEditCtrl', ['$scope','$stateParams', '$http','$interval','Con
             $http({
                 url: Config.url + '/maintenance/add',
                 method: "POST",
-                data: { 'message' : inputveld }
+                data: { 'description' : inputveld, 'Car_id' : $stateParams.id }
             })
                 .then(function(response) {
                         $window.location.href = '#/cars/';
-
+                        Alert.addAlert("success","fa-check","Maintenance added for review");
                     },
                     function(response) { // optional
-                        console.log("faal");
+                        Alert.addAlert("danger","fa-exclamation-triangle","Failed to delete");
                     });
         }
     }

@@ -34,4 +34,20 @@ router.get('/owner/:Username', function(req, res) {
     });
 });
 
+router.get('/parts/:Id', function(req, res) {
+    connection.query('select * from Car_has_Part as chp left join Car as c on chp.Car_id = c.id left join Part as p on p.id = chp.Part_id WHERE chp.Car_id = ?',req.params.Id, function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows);
+    });
+});
+
+router.get('/maintenance/:Id', function(req, res) {
+    connection.query('select * from Car_has_Maintenance as chm left join Car as c on chm.Car_id = c.id WHERE chm.Car_id = ?',req.params.Id, function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows);
+    });
+});
+
+
+
 module.exports = router;

@@ -35,17 +35,6 @@ router.get('/:Id', function(req, res, next) {
 
 });
 
-/* GET parts belonging to a car. */
-router.get('/carparts/:Id', function(req, res, next) {
-
-    connection.query('SELECT * FROM `Car_has_Part` as cp left join Car as c on c.Id = cp.Car_id where c.Id = ?;',req.params.Id, function(err, rows, fields) {
-        if (err) throw err;
-        res.send(rows);
-    });
-
-});
-
-
 router.post('/add',function(request,response){
     var name=request.body.Name;
     var version=request.body.Version;

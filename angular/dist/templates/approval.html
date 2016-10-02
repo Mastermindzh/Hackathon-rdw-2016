@@ -1,34 +1,61 @@
 <div data-ng-controller="ApprovalsCtrl">
-    <div class="row" ng-show="username != 'rdw'">
+
+
+    <div class="row">
         <div class="col-lg-12 col-xs-12 blackLinks">
             <rd-widget>
                 <rd-widget-body classes="minHeight">
-                   <h1>Aanpassing:</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus architecto at cum ea, est, et facilis minima nulla porro sint, sunt. Aperiam aspernatur, dignissimos eum fugit harum soluta ullam?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, autem commodi corporis, cumque harum ipsam labore mollitia nisi quaerat quasi quo quos reprehenderit rerum, sequi sunt tempora! Architecto, sed.
-                    </p>
-                    <a class="btn btn-success pull-right">Goedkeuren</a>
-                    <div class="clearfix"></div>
+                    <h1>Auto onderdeel goedkeuren</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Owner</th>
+                                <th>License plate</th>
+                                <th>Maintenance done:</th>
+                                <th>Goedkeuren</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in maintenance">
+                                <td>{{item.Name}}</td>
+                                <td>{{item.Owner}}</td>
+                                <td>{{item.License_plate}}</td>
+                                <td>{{item.description}}</td>
+                                <td><a href="" ng-click="approve(item.id)"><i class="fa fa-check"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </rd-widget-body>
             </rd-widget>
         </div>
     </div>
 
-    <div class="row" ng-show="username == 'rdw'">
+    <h1>RDW only</h1>
+    <hr>
+    <div class="row">
         <div class="col-lg-12 col-xs-12 blackLinks">
             <rd-widget>
                 <rd-widget-body classes="minHeight">
-                    <h1>Auto onderdeel goedkeren</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus architecto at cum ea, est, et facilis minima nulla porro sint, sunt. Aperiam aspernatur, dignissimos eum fugit harum soluta ullam?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, autem commodi corporis, cumque harum ipsam labore mollitia nisi quaerat quasi quo quos reprehenderit rerum, sequi sunt tempora! Architecto, sed.
-                    </p>
-                    <a class="btn btn-success pull-right">Goedkeuren</a>
-                    <div class="clearfix"></div>
+                    <h1>Auto features goedkeren</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>carID</th>
+                            <th>Description</th>
+                            <th>Goedkeuren</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in features">
+                            <td>{{item.Car_id}}</td>
+                            <td>{{item.description}}</td>
+                            <td><a href="" ng-click="approveFeature(item.id)"><i class="fa fa-check"></i></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </rd-widget-body>
             </rd-widget>
         </div>
     </div>
-
 </div>

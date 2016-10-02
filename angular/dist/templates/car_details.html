@@ -8,7 +8,7 @@
                 <rd-widget-body classes="">
                    <div class="row">
                        <div class="col-lg-4 col-md-4 col-xs-4">
-                        <img src="https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png" alt="car">
+                        <img src="{{car[0].Image}}" alt="car">
                        </div>
                        <div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-xs-7 col-xs-offset-1">
                            <div class="widget-icon red pull-right">
@@ -31,7 +31,7 @@
                         <div class="col-lg-12">
                             <h3>Meer info:</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque in magnam nostrum provident. Ab accusamus, aliquam aspernatur assumenda distinctio doloribus et facere libero nihil quam qui quidem quos rerum unde?
+                                Owner: {{car[0].Owner}}
                             </p>
                         </div>
                     </div>
@@ -45,18 +45,14 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Datum</th>
-                                                <th>Gebeurtenis</th>
+                                                <th>id</th>
+                                                <th>Beschrijving</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td class="col-md-3">2016-5-12</td>
-                                                <td> Software update </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="col-md-3">2016-5-12</td>
-                                                <td> Software update </td>
+                                            <tr ng-repeat="item in carMaintenance">
+                                                <td>{{item.id}}</td>
+                                                <td> {{item.description}} </td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -64,10 +60,9 @@
                                 </rd-widget-body>
                             </rd-widget>
                         </div>
-
                     </div>
 
-                    <div class="row" ng-show="username == 'rdw'">
+                    <div class="row">
                         <div class="col-lg-12">
                             <rd-widget>
                                 <rd-widget-header icon="fa-tasks" title="Onderdelen:">
@@ -77,18 +72,18 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Onderdeel</th>
-                                                <th>Status</th>
+                                                <th>Id</th>
+                                                <th>Naam</th>
+                                                <th>Version</th>
+                                                <th>Approved</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td class="col-md-3">Spiegel</td>
-                                                <td> Goedgekeurd </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="col-md-3">Remmen</td>
-                                                <td> Goedgekeurd </td>
+                                            <tr ng-repeat="item in carParts">
+                                                <td> {{item.id}}</td>
+                                                <td> {{item.Name}}</td>
+                                                <td> {{item.Version}}</td>
+                                                <td> {{item.approved}}</td>
                                             </tr>
                                             </tbody>
                                         </table>

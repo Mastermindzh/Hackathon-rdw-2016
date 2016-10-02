@@ -8,7 +8,8 @@ app.controller('CarDetailsCtlr', ['$scope', '$stateParams', '$http','$rootScope'
         $scope.username = $rootScope.username;
 
         $scope.car;
-        console.log($stateParams.id);
+        $scope.carParts;
+        $scope.carMaintenance;
 
         $http.get(Config.url + '/cars/' + $stateParams.id)
             .success(function(data, status, headers, config) {
@@ -16,6 +17,22 @@ app.controller('CarDetailsCtlr', ['$scope', '$stateParams', '$http','$rootScope'
             })
             .error(function(data, status, headers, config) {
                 Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car data");
+            });
+
+        $http.get(Config.url + '/cars/parts/' + $stateParams.id)
+            .success(function(data, status, headers, config) {
+                $scope.carParts =  data;
+            })
+            .error(function(data, status, headers, config) {
+                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car parts");
+            });
+
+        $http.get(Config.url + '/cars/maintenance/' + $stateParams.id)
+            .success(function(data, status, headers, config) {
+                $scope.carMaintenance =  data;
+            })
+            .error(function(data, status, headers, config) {
+                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car parts");
             });
     }
 

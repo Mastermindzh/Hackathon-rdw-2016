@@ -27,7 +27,15 @@ router.get('/', function(req, res, next) {
 /* GET maintenance listing. */
 router.get('/notapproved', function(req, res, next) {
 
-    connection.query('select * from Car_has_Maintenance where !approved', function(err, rows, fields) {
+    connection.query('select c.Name, description, chm.id, License_plate, Owner from Car_has_Maintenance as chm left join Car as c on c.id = chm.Car_id where !approved', function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows);
+    });
+
+});
+
+router.get('/notapprovedfeatures', function(req, res, next) {
+    connection.query('select * from Car_has_new_feature where !approved', function(err, rows, fields) {
         if (err) throw err;
         res.send(rows);
     });
@@ -56,8 +64,8 @@ router.get('/carmaintenance/:Id', function(req, res, next) {
 
 router.post('/add',function(request,response){
     var description=request.body.description;
-    console.log('logging: ' + description);
-    connection.query('INSERT INTO Maintenance (description) VALUES (?)',description, function(err, rows, fields) {
+    var car_id=request.body.Car_id;
+    connection.query('INSERT INTO Car_has_Maintenance (description,Car_id) VALUES (?,?)',[description,car_id], function(err, rows, fields) {
         if (err) throw err;
     });
 
@@ -77,10 +85,19 @@ router.post('/carmaintenance',function(request,response){
 });
 
 router.post('/approve',function(request,response){
-    var car_id=request.body.Car_id;
-    var maintenance_id=request.body.Maintenance_id;
+    var id=request.body.id;
 
-    connection.query('UPDATE Car_has_Maintenance set approved = 1 where Car_id = ? AND Maintenance_id = ?',[car_id,maintenance_id], function(err, rows, fields) {
+    connection.query('UPDATE Car_has_Maintenance set approved = 1 where id = ?',id, function(err, rows, fields) {
+        if (err) throw err;
+    });
+
+    response.end();
+});
+
+router.post('/approveFeature',function(request,response){
+    var id=request.body.id;
+
+    connection.query('UPDATE Car_has_new_feature set approved = 1 where id = ?',id, function(err, rows, fields) {
         if (err) throw err;
     });
 
