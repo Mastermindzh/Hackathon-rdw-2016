@@ -29,7 +29,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'templates/approval.html'
             })
             .state('addFeature', {
-                url: '/addfeature',
+                url: '/addfeature/:id',
                 templateUrl: 'templates/car_edit_feature.html'
             })
 

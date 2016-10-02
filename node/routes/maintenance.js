@@ -94,6 +94,16 @@ router.post('/approve',function(request,response){
     response.end();
 });
 
+router.post('/addFeature',function(request,response){
+    var description=request.body.description;
+    var car_id=request.body.Car_id;
+    connection.query('INSERT INTO Car_has_new_feature (description,Car_id) VALUES (?,?)',[description,car_id], function(err, rows, fields) {
+        if (err) throw err;
+    });
+
+    response.end();
+});
+
 router.post('/approveFeature',function(request,response){
     var id=request.body.id;
 
