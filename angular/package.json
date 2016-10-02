@@ -26,5 +26,8 @@
     "type": "git",
     "url": ""
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "angular-chart.js": "^1.0.3"
+  }
 }

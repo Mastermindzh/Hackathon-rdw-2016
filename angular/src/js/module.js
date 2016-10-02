@@ -1,5 +1,5 @@
 
-var app = angular.module('Sammy-gui', ['ui.bootstrap', 'ui.router', 'ngCookies', 'chart.js'])
+var app = angular.module('Sammy-gui', ['ui.bootstrap', 'ui.router', 'ngCookies','chart.js'])
 
 /* converts seconds date */
 .filter('secondsToDateTime', [function() {
