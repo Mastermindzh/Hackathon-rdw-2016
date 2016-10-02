@@ -15,7 +15,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                 $scope.maintenance =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car data");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto data kan niet worden opgehaald.");
             });
 
         $http.get(Config.url + '/maintenance/notapprovedfeatures')
@@ -23,7 +23,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                 $scope.features =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car features");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto onderdelen kunnen niet worden opgehaald.");
             });
 
         $scope.approve = function(id){
@@ -33,7 +33,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                 data: { 'id' : id }
             })
                 .then(function(response) {
-                        Alert.addAlert("success","fa-check","Maintenance with id: " +id + " approved!");
+                        Alert.addAlert("success","fa-check","Onderhoud met onderhoudsid " +id + " goedgekeurd!");
                         for(i=0;i<$scope.maintenance.length;i++){
                             if($scope.maintenance[i].id == id){
                                 $scope.maintenance.shift();
@@ -41,7 +41,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                         }
                     },
                     function(response) { // optional
-                        Alert.addAlert("danger","fa-exclamation-triangle","Failed to approve");
+                        Alert.addAlert("danger","fa-exclamation-triangle","Het goedkeuren is niet gelukt. Probeer het later opnieuw.");
                     });
         }
         $scope.approveFeature = function(id){
@@ -51,7 +51,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                 data: { 'id' : id }
             })
                 .then(function(response) {
-                        Alert.addAlert("success","fa-check","Feature with id: " +id + " approved!");
+                        Alert.addAlert("success","fa-check","Kenmerk met kenmerksid " +id + " goedgekeurd!");
                         for(i=0;i<$scope.features.length;i++){
                             if($scope.features[i].id == id){
                                 $scope.features.shift();
@@ -59,7 +59,7 @@ app.controller('ApprovalsCtrl', ['$scope','$http','$rootScope','$stateParams','C
                         }
                     },
                     function(response) { // optional
-                        Alert.addAlert("danger","fa-exclamation-triangle","Failed to approve");
+                        Alert.addAlert("danger","fa-exclamation-triangle","Het goedkeuren is niet gelukt. Probeer het later opnieuw");
                     });
         }
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>RDW portal</title>
+  <title>RDW Portaal</title>
   <script type="text/javascript" src="config.js"></script>
   <!-- STYLES -->
   <!-- build:css lib/css/main.min.css -->
@@ -34,12 +34,12 @@
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
-            Navigation
+            Navigatie
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
         <li class="sidebar-list" ng-show="(username == undefined) || username ==''">
-          <a href="#">Login <span class="menu-icon fa fa-user"></span></a>
+          <a href="#">Inloggen <span class="menu-icon fa fa-user"></span></a>
         </li>
         <li class="sidebar-list"  ng-show="(username != undefined) && (username != '')">
           <a href="#/cars">Mijn voertuigen <span class="menu-icon fa fa-car"></span></a>
@@ -68,23 +68,23 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li class="dropdown-header">
-                    System actions
+                    Systeemacties
                   </li>
                   <li class="divider"></li>
                   <li class="link">
                     <a href="#">
-                      <i class="fa fa-info-circle normalIcon pull-right" style ="color: #2361AE" aria-hidden="true"></i> Info
+                      <i class="fa fa-info-circle normalIcon pull-right" style ="color: #2361AE" aria-hidden="true"></i> Informatie
                     </a>
                   </li>
                   <li class="link">
                     <a href="#" data-ng-click="reboot()">
-                      <i class="fa fa-refresh normalIcon pull-right" aria-hidden="true" style ="color: #23AE89;"></i> Reboot
+                      <i class="fa fa-refresh normalIcon pull-right" aria-hidden="true" style ="color: #23AE89;"></i> Herstarten
                     </a>
                   </li>
                   <li class="divider"></li>
                   <li class="link">
                     <a href="#" data-ng-click="shutdown()">
-                       <i class="fa fa-power-off normalIcon pull-right" aria-hidden="true" style="color: #AE2323;"></i>Shut down
+                       <i class="fa fa-power-off normalIcon pull-right" aria-hidden="true" style="color: #AE2323;"></i>Uitzetten
                     </a>
                   </li>
                 </ul>
@@ -112,9 +112,9 @@
           <div class="col-xs-12">
             <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
                 <i class="fa {{alert.icon}}" aria-hidden="true"></i>
-                <span ng-if="alert.type === 'danger'">Error:</span>
-                <span ng-if="alert.type === 'warning'">Warning:</span>
-                <span ng-if="alert.type === 'info'">Info:</span>
+                <span ng-if="alert.type === 'danger'">Foutmelding:</span>
+                <span ng-if="alert.type === 'warning'">Waarschuwing:</span>
+                <span ng-if="alert.type === 'info'">Informatie:</span>
                 <span class = "errorSpan">{{ alert.msg }}</span>
             </uib-alert>
           </div>

@@ -23,10 +23,10 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
                 $scope.currentPage = "Aanpassingen goedkeuren";
                 break;
             case "/addfeature":
-                $scope.currentPage = "Auto feature toevoegen";
+                $scope.currentPage = "Auto kenmerk toevoegen";
                 break;
             default:
-                $scope.currentPage = "Login";
+                $scope.currentPage = "Inloggen";
             break;
         }
 

@@ -5,7 +5,7 @@ app.service('Alert', function () {
     this.addAlert = function(itype,iicon,imsg) {
         var exists = false;
 
-        // check wether we have items, if we don't it can't exist.
+        // check whether we have items, if we don't it can't exist.
         if(!(this.alerts.length > 0)){
             this.alerts.push({type: itype, icon: iicon, msg:imsg});
         }else{ // if we do have items check all of them

@@ -15,7 +15,7 @@ app.controller('CarsCtrl', ['$scope','$http','$rootScope','Config','Alert', Cars
                 $scope.cars = data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car data");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto data kan niet worden opgehaald.");
             });
 }
 

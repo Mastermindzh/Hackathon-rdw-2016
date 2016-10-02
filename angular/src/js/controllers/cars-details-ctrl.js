@@ -16,7 +16,7 @@ app.controller('CarDetailsCtlr', ['$scope', '$stateParams', '$http','$rootScope'
                 $scope.car =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car data");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto data kan niet worden opgehaald.");
             });
 
         $http.get(Config.url + '/cars/parts/' + $stateParams.id)
@@ -24,7 +24,7 @@ app.controller('CarDetailsCtlr', ['$scope', '$stateParams', '$http','$rootScope'
                 $scope.carParts =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car parts");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto onderdelen kunnen niet worden opgehaald.");
             });
 
         $http.get(Config.url + '/cars/maintenance/' + $stateParams.id)
@@ -32,7 +32,7 @@ app.controller('CarDetailsCtlr', ['$scope', '$stateParams', '$http','$rootScope'
                 $scope.carMaintenance =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car parts");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto onderdelen kunnen niet worden opgehaald.");
             });
     }
 

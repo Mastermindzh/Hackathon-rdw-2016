@@ -10,10 +10,10 @@ app.controller('CarEditFeature', ['$scope','$http','$stateParams','$interval','C
             })
                 .then(function(response) {
                         $window.location.href = '#/cars/';
-                        Alert.addAlert("success","fa-check","Feature added for review");
+                        Alert.addAlert("success","fa-check","Kenmerk toegevoegd voor controle.");
                     },
                     function(response) { // optional
-                        Alert.addAlert("danger","fa-exclamation-triangle","Failed to delete");
+                        Alert.addAlert("danger","fa-exclamation-triangle","Het verwijderen is niet gelukt. Probeer het later opnieuw.");
                     });
         }
     }

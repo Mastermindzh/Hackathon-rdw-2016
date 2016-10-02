@@ -10,7 +10,7 @@ app.controller('CarEditCtrl', ['$scope','$stateParams', '$http','$interval','Con
                 $scope.car =  data;
             })
             .error(function(data, status, headers, config) {
-                Alert.addAlert("danger","fa-exclamation-triangle","Can't fetch car data");
+                Alert.addAlert("danger","fa-exclamation-triangle","Auto data kan niet worden opgehaald.");
             });
         $scope.addData = function(inputveld) {
             $http({
@@ -20,10 +20,10 @@ app.controller('CarEditCtrl', ['$scope','$stateParams', '$http','$interval','Con
             })
                 .then(function(response) {
                         $window.location.href = '#/cars/';
-                        Alert.addAlert("success","fa-check","Maintenance added for review");
+                        Alert.addAlert("success","fa-check","Onderhoud is toegevoegd voor controle.");
                     },
                     function(response) { // optional
-                        Alert.addAlert("danger","fa-exclamation-triangle","Failed to delete");
+                        Alert.addAlert("danger","fa-exclamation-triangle","Verwijderen is niet gelukt. Probeer het later opnieuw.");
                     });
         }
     }
