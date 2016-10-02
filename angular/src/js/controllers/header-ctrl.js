@@ -13,10 +13,22 @@ function HeaderCtrl($scope,$rootScope,$location,Config,$http) {
             case "/cars":
                 $scope.currentPage = "Mijn voertuigen";
             break;
-            case "/cars/details":
+            case "/cars/1":
                 $scope.currentPage = "Mijn voertuig details";
                 break;
-            case "/cars/details/edit":
+            case "/cars/2":
+                $scope.currentPage = "Mijn voertuig details";
+                break;
+            case "/cars/3":
+                $scope.currentPage = "Mijn voertuig details";
+                break;
+            case "/cars/details/edit/1":
+                $scope.currentPage = "Mijn voertuig aanpassen";
+                break;
+            case "/cars/details/edit/2":
+                $scope.currentPage = "Mijn voertuig aanpassen";
+                break;
+            case "/cars/details/edit/3":
                 $scope.currentPage = "Mijn voertuig aanpassen";
                 break;
             case "/approval":
