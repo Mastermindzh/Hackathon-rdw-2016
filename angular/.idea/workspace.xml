@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9381c9cc-24ca-41fe-a4ee-405457cc2fc3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/js/sammy.min.js" afterPath="$PROJECT_DIR$/dist/js/sammy.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/templates/car_overview.html" afterPath="$PROJECT_DIR$/dist/templates/car_overview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/templates/dashboard.html" afterPath="$PROJECT_DIR$/dist/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/templates/rdw_portal.html" afterPath="$PROJECT_DIR$/dist/templates/rdw_portal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/controllers/header-ctrl.js" afterPath="$PROJECT_DIR$/src/js/controllers/header-ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/car_overview.html" afterPath="$PROJECT_DIR$/src/templates/car_overview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/dashboard.html" afterPath="$PROJECT_DIR$/src/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/rdw_portal.html" afterPath="$PROJECT_DIR$/src/templates/rdw_portal.html" />
     </list>
     <ignored path="angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,21 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cars-edit-feature-ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/controllers/cars-edit-feature-ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="133" selection-start-line="15" selection-start-column="133" selection-end-line="15" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="car_overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/car_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+            <state relative-caret-position="180">
+              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -65,8 +56,8 @@
       <file leaf-file-name="rdw_portal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/rdw_portal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="113" column="59" selection-start-line="113" selection-start-column="59" selection-end-line="113" selection-end-column="59" />
+            <state relative-caret-position="90">
+              <caret line="6" column="117" selection-start-line="6" selection-start-column="117" selection-end-line="6" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -95,14 +86,24 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+            <state relative-caret-position="465">
+              <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sammy.min.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sammy.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/js/sammy.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -152,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/dashboard-ctrl.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/master-ctrl.js" />
-        <option value="$PROJECT_DIR$/src/templates/car_overview.html" />
         <option value="$PROJECT_DIR$/src/js/routes.js" />
         <option value="$PROJECT_DIR$/src/js/module.js" />
         <option value="$PROJECT_DIR$/src/templates/approval.html" />
@@ -160,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/templates/car_edit.html" />
         <option value="$PROJECT_DIR$/src/templates/car_edit_feature.html" />
         <option value="$PROJECT_DIR$/src/js/services/alert.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/js/controllers/approvals-ctrl.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/cars-ctrl.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/cars-details-ctrl.js" />
@@ -168,9 +167,11 @@
         <option value="$PROJECT_DIR$/src/js/controllers/cars-edit-ctrl.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/header-ctrl.js" />
         <option value="$PROJECT_DIR$/src/js/controllers/charts-ctrl.js" />
-        <option value="$PROJECT_DIR$/src/templates/rdw_portal.html" />
-        <option value="$PROJECT_DIR$/src/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/dist/js/sammy.min.js" />
+        <option value="$PROJECT_DIR$/src/templates/rdw_portal.html" />
+        <option value="$PROJECT_DIR$/src/templates/car_overview.html" />
+        <option value="$PROJECT_DIR$/src/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -550,12 +551,12 @@
       <workItem from="1475354563187" duration="10394000" />
       <workItem from="1475366211841" duration="8604000" />
       <workItem from="1475403232503" duration="538000" />
-      <workItem from="1475403779590" duration="2096000" />
+      <workItem from="1475403779590" duration="2541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43323000" />
+    <option name="totallyTimeSpent" value="43768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1050" extended-state="0" />
@@ -848,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -960,34 +953,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/car_overview.html">
+    <entry file="file://$PROJECT_DIR$/dist/js/sammy.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+        <state relative-caret-position="135">
+          <caret line="9" column="205" selection-start-line="9" selection-start-column="205" selection-end-line="9" selection-end-column="205" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/rdw_portal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="113" column="59" selection-start-line="113" selection-start-column="59" selection-end-line="113" selection-end-column="59" />
+        <state relative-caret-position="90">
+          <caret line="6" column="117" selection-start-line="6" selection-start-column="117" selection-end-line="6" selection-end-column="117" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+        <state relative-caret-position="465">
+          <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/sammy.min.js">
+    <entry file="file://$PROJECT_DIR$/src/templates/car_overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="205" selection-start-line="9" selection-start-column="205" selection-end-line="9" selection-end-column="205" />
+        <state relative-caret-position="180">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
           <folding />
         </state>
       </provider>
