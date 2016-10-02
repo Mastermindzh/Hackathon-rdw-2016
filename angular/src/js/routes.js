@@ -32,6 +32,10 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: '/addfeature/:id',
                 templateUrl: 'templates/car_edit_feature.html'
             })
+            .state('rdwPortal', {
+                url: '/rdwportal',
+                templateUrl: 'templates/rdw_portal.html'
+            })
 
     }
 ]);
